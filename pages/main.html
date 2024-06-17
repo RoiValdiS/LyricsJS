@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <script src="../Scripts/ajaxCalls.js"></script>
+  <script src="../Scripts/main.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../Styles/global.css">
+  <link rel="stylesheet" href="../Styles/main.css" id="theme-link">
+  <title>Lyrics.io</title>
+</head>
+
+<body onload="init()">
+  <div id="loader"></div>
+  <div id="full"></div>
+
+  <div class="sidebar">
+    <div onclick="getSongs()" class="logo">
+      <a href="#">
+        <img src="../img/2.png" alt="Logo" class="logoImg" />
+      </a>
+    </div>
+    <div class="navigation">
+      <ul>
+        <li onclick="getSongs()">
+          <a href="#">
+            <span class="fa fa-home"></span>
+            <span>Home</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="fa fa-search"></span>
+            <span onclick="OpenSearch()">Search</span>
+          </a>
+        </li>
+
+
+      </ul>
+    </div>
+    
+    <div class="navigation">
+      <ul>
+
+
+        <li onclick="getLikedSongs()">
+          <a href="#">
+            <span class="fa fas fa-heart"></span>
+            <span>Liked Songs</span>
+          </a>
+        </li>
+        <li onclick="startGame()">
+          <a href="#">
+            <span class="fa fa-gamepad"></span>
+            <span>Quize</span>
+          </a>
+        </li>
+        <li onclick="renderAdditions()">
+          <a href="#">
+            <span class="fa fa-solid fa-plus"></span>
+            <span>Additions</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="policies">
+        <ul>
+          <li>
+            Bar Levi Atias
+          </li>
+          <li>
+           Roi Valdman
+          </li>
+        </ul>
+      </div>
+    </div>
+      <div class="toggle-div">
+        <input onchange="toggleDarkMode()" type="checkbox" class="checkbox" id="checkbox" >
+        <label for="checkbox" class="checkbox-label">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+          <span class="ball"></span>
+        </label>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="main-container">
+    <div class="topbar">
+      <div class="prev-next-buttons">
+        <i onclick="openMenu()" class="menu fa-solid fa-bars"></i>
+      </div>
+
+      <div class="navbar">
+        <p class="hello">hello bar</p>
+        <button onclick="logout()" id="centers" type="button">Logout</button>
+      </div>
+    </div>
+    <div class="search-div"></div>
+    <div class="spotify-playlists">
+
+    </div>
+    <div class="videos" style="text-align: center;"></div>
+    <div class="quize-div">
+      <h4 class="score"></h4>
+      <div class="question">
+        <div class="top3" style="color: white;border-top: 1px solid white;"> </div>
+        
+      </div>
+    </div>
+   
+
+
+    <script src="https://kit.fontawesome.com/23cecef777.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+body{
+    color: white;
+}
+table.dataTable {
+    color: white;
+}
+td ,tr{
+    border: 1px solid white;
+
+}
